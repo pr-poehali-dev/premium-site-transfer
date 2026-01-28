@@ -1,0 +1,14 @@
+{
+  "tests": [
+    {
+      "name": "Get all active fleet",
+      "method": "GET",
+      "path": "/",
+      "expectedStatus": 200,
+      "expectedBody": {
+        "fleet": "array"
+      },
+      "bodyMatcher": "partial"
+    }
+  ]
+}

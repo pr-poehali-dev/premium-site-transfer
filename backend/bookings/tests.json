@@ -1,0 +1,37 @@
+{
+  "tests": [
+    {
+      "name": "Get all bookings",
+      "method": "GET",
+      "path": "/",
+      "expectedStatus": 200,
+      "expectedBody": {
+        "bookings": "array"
+      },
+      "bodyMatcher": "partial"
+    },
+    {
+      "name": "Create booking",
+      "method": "POST",
+      "path": "/",
+      "body": {
+        "customer_name": "Иван Тестов",
+        "customer_phone": "+79001234567",
+        "customer_email": "test@example.com",
+        "from_location": "Аэропорт Адлер",
+        "to_location": "Гагра",
+        "pickup_date": "2024-12-25",
+        "pickup_time": "10:00",
+        "passengers": 2,
+        "fleet_id": 1
+      },
+      "expectedStatus": 201,
+      "expectedBody": {
+        "success": true,
+        "booking_id": "number",
+        "total_price": "number"
+      },
+      "bodyMatcher": "partial"
+    }
+  ]
+}

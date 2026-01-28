@@ -5,6 +5,7 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import Icon from '@/components/ui/icon';
+import BookingForm from '@/components/BookingForm';
 
 const Index = () => {
   const [activeSection, setActiveSection] = useState('home');
@@ -132,63 +133,7 @@ const Index = () => {
                 <h3 className="text-2xl font-montserrat font-bold text-white mb-6">
                   Быстрое бронирование
                 </h3>
-                <form className="space-y-4">
-                  <div>
-                    <Label htmlFor="from" className="text-white mb-2 block">
-                      Откуда
-                    </Label>
-                    <Input
-                      id="from"
-                      placeholder="Аэропорт Адлер"
-                      className="bg-white/20 border-gold/30 text-white placeholder:text-gray-400"
-                    />
-                  </div>
-                  <div>
-                    <Label htmlFor="to" className="text-white mb-2 block">
-                      Куда
-                    </Label>
-                    <Input
-                      id="to"
-                      placeholder="Гагра, Абхазия"
-                      className="bg-white/20 border-gold/30 text-white placeholder:text-gray-400"
-                    />
-                  </div>
-                  <div className="grid grid-cols-2 gap-4">
-                    <div>
-                      <Label htmlFor="date" className="text-white mb-2 block">
-                        Дата
-                      </Label>
-                      <Input
-                        id="date"
-                        type="date"
-                        className="bg-white/20 border-gold/30 text-white"
-                      />
-                    </div>
-                    <div>
-                      <Label htmlFor="time" className="text-white mb-2 block">
-                        Время
-                      </Label>
-                      <Input
-                        id="time"
-                        type="time"
-                        className="bg-white/20 border-gold/30 text-white"
-                      />
-                    </div>
-                  </div>
-                  <div>
-                    <Label htmlFor="flight" className="text-white mb-2 block">
-                      Номер рейса (опционально)
-                    </Label>
-                    <Input
-                      id="flight"
-                      placeholder="SU 1234"
-                      className="bg-white/20 border-gold/30 text-white placeholder:text-gray-400"
-                    />
-                  </div>
-                  <Button className="w-full bg-gold hover:bg-gold/90 text-[#1A1F2C] font-semibold text-lg">
-                    Рассчитать стоимость
-                  </Button>
-                </form>
+                <BookingForm />
               </CardContent>
             </Card>
           </div>
